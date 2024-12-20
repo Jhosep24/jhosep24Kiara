@@ -1,0 +1,350 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff3e96, #ff6a3d);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll; /* Asegura que haya desplazamiento vertical */  
+  }
+  
+  /* Encabezado */
+ /* Estilo del título con clase navidad-titulo */
+.navidad-titulo {
+    text-align: center;
+    font-size: 3em;
+    color: #FF6347; /* Color rojo para el texto */
+    margin-top: 20px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: glow 1.5s ease-in-out infinite alternate, shake 1s ease-in-out infinite;
+  }
+  
+  /* Animación de resplandor para el título */
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px #FF6347, 0 0 10px #FF6347, 0 0 15px #FF6347;
+    }
+    50% {
+      text-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347, 0 0 30px #FF6347;
+    }
+    100% {
+      text-shadow: 0 0 5px #FF6347, 0 0 10px #FF6347, 0 0 15px #FF6347;
+    }
+  }
+  
+  /* Animación de sacudida para el título */
+  @keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+  }
+  
+  /* Estilo del mensaje con clase mensaje-navidad */
+  .mensaje-navidad {
+    font-size: 1.8em;
+    color: #4B0082; /* Violeta para el mensaje */
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    animation: pulse 2s infinite ease-in-out, glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  /* Animación de parpadeo para el mensaje */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Animación de resplandor para el mensaje */
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px #4B0082, 0 0 10px #4B0082, 0 0 15px #4B0082;
+    }
+    50% {
+      text-shadow: 0 0 10px #4B0082, 0 0 20px #4B0082, 0 0 30px #4B0082;
+    }
+    100% {
+      text-shadow: 0 0 5px #4B0082, 0 0 10px #4B0082, 0 0 15px #4B0082;
+    }
+  }
+  
+  /* Árbol de Navidad */
+  .christmas-tree img {
+    width: 300px;
+    margin: 20px 0;
+    animation: shake 3s infinite ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+  }
+  
+  /* Mensaje */
+  .message {
+    font-size: 1.2rem;
+    margin: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Botones */
+/* Contenedor de los botones */
+/* Contenedor de los botones */
+.sorpresas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Esto crea dos columnas */
+    justify-content: center; /* Centra los botones */
+    align-items: center; /* Centra los botones verticalmente */
+    gap: 15px; /* Espacio entre los botones */
+    padding: 20px;
+    text-align: center;
+    animation: aparecer 2s ease-out; /* Animación para hacer que los botones aparezcan */
+  }
+  
+  /* Animación para hacer que los botones aparezcan desde abajo */
+  @keyframes aparecer {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilo para cada botón */
+/* Estilo para cada botón */
+.sorpresa-btn {
+    background: linear-gradient(45deg, #00ff3c, #ff0800, #ffe23e); /* Degradado navideño: verde, rojo, dorado */
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para los botones */
+    font-family: 'Dancing Script', cursive;
+    animation: brillar 1.5s infinite alternate; /* Animación de brillo */
+  }
+  
+  /* Animación de brillo para los botones */
+  @keyframes brillar {
+    0% {
+      box-shadow: 0px 10px 20px rgba(255, 99, 71, 0.6); /* Rojo brillante */
+    }
+    100% {
+      box-shadow: 0px 10px 20px rgba(255, 99, 71, 1); /* Rojo fuerte */
+    }
+  }
+  
+  /* Estilo para el emoji dentro del botón */
+  .emoji {
+    margin-right: 10px; /* Espacio entre el emoji y el texto */
+    font-size: 22px; /* Tamaño del emoji */
+  }
+  
+  /* Cambio de color al pasar el ratón por encima */
+  .sorpresa-btn:hover {
+    background-color: #d9534f; /* Rojo brillante navideño */
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
+  }
+
+
+
+  /* Estilos para el botón de "Regresar al Inicio" */
+.back-to-top {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .back-btn {
+    background: linear-gradient(45deg, #28a745, #d9534f, #ffd700); /* Degradado navideño */
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-btn:hover {
+    background: linear-gradient(45deg, #ff6347, #ffd700, #28a745); /* Efecto hover */
+    transform: scale(1.1); /* Aumenta el tamaño */
+  }
+  /* Pie de página */
+  footer {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #ffe4e1;
+  }
+  
+
+  /* Copos de nieve */
+.snowflake {
+    position: fixed;
+    top: 0;
+    color: #fff;
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+  
+
+/* Contenedor de los regalos */
+/* Contenedor de los regalos */
+/* Contenedor de los regalos */
+.regalos-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    pointer-events: none; /* Para que no interfiera con la interacción del usuario */
+    overflow: hidden;
+    z-index: 9999; /* Asegura que los regalos caigan sobre el contenido */
+  }
+  
+  /* Estilo para cada regalo */
+  .regalo {
+    position: absolute;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/regalo2.jpg'); /* Aquí pones la ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    animation: caer 5s linear infinite, moverse 2s ease-in-out infinite;
+  }
+  
+  
+  /* Animación para hacer que caigan los regalos */
+/* Animación para hacer que caigan los regalos */
+@keyframes caer {
+    0% {
+      top: -50px;
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 0;
+    }
+  }
+  
+  /* Animación para hacer que los regalos se deslicen de un lado a otro */
+  @keyframes moverse {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-50px); /* Se mueven hacia la izquierda */
+    }
+    50% {
+      transform: translateX(50px); /* Se mueven hacia la derecha */
+    }
+    75% {
+      transform: translateX(-30px); /* Regresan un poco */
+    }
+    100% {
+      transform: translateX(0); /* Regresan a su posición inicial */
+    }
+  }
+
+  /* Media query para pantallas de 480px o menos (móviles) */
+@media (max-width: 480px) {
+    .navidad-titulo {
+        font-size: 2.5em; /* Ajusta el tamaño del título */
+      }
+      
+      .mensaje-navidad {
+        font-size: 1.4em; /* Ajusta el tamaño del texto */
+      }
+    
+    .christmas-tree img {
+      width: 220px; /* Disminuye el tamaño del árbol */
+    }
+    .regalo {
+        width: 30px;
+        height: 30px;
+      }
+      .sorpresas-container {
+        grid-template-columns: repeat(2, 1fr);  /* Dos columnas en pantallas móviles */
+      }
+    
+      .sorpresa-btn {
+        font-size: 16px;  /* Tamaño de fuente más pequeño para pantallas pequeñas */
+        padding: 12px 24px;  /* Tamaño de los botones más pequeño */
+      }
+    
+      .sorpresa-btn {
+        flex: 0 1 48%; /* Los botones ocupan el 48% del ancho, dos por fila */
+        margin: 10px 0; /* Espacio entre las filas */
+        animation: brillar 1.5s infinite alternate; /* Animación de brillo */
+      }
+      .back-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+  }
+  
+  /* Media query para pantallas entre 481px y 760px (tabletas) */
+  @media (max-width: 760px) and (min-width: 481px) {
+    h1 {
+      font-size: 2.2em; /* Ajusta el tamaño del título */
+    }
+    
+    .christmas-tree img {
+      width: 250px; /* Ajusta el tamaño del árbol */
+    }
+  
+    p {
+      font-size: 1.4em; /* Ajusta el tamaño del texto */
+    }
+  
+    button {
+      font-size: 1.1em; /* Ajusta el tamaño del botón */
+      padding: 9px 18px; /* Ajusta el padding del botón */
+    }
+  }
+  /* En pantallas medianas (entre 481px y 760px), los botones también estarán en dos columnas */
+@media (min-width: 481px) and (max-width: 760px) {
+    .sorpresas-container {
+      flex-direction: row; /* Los botones se mantienen en una fila */
+      justify-content: center; /* Los botones se centran horizontalmente */
+    }
+  
+    .sorpresa-btn {
+      flex: 0 1 48%; /* Los botones ocupan el 48% del ancho, dos por fila */
+      margin: 10px 0; /* Espacio entre las filas */
+    }
+  }

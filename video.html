@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un Video para Ti</title>
+  <link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+
+  <!-- Música de fondo -->
+  <audio autoplay loop>
+    <source src="tu-musica-navidad.mp3" type="audio/mp3">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- Sección de video -->
+  <div class="video-container">
+    <h2 class="titulo-video">🎥 Un Video Especial para Ti 🎥</h2>
+
+    <!-- Botón para mostrar el video o pausar -->
+    <button class="video-btn" id="videoBtn" onclick="toggleVideo()">Ver Video</button>
+
+    <!-- Contenedor para el video (inicialmente oculto) -->
+    <div id="videoContainer" class="video-content">
+      <iframe id="videoFrame" width="90%" height="400" src="https://www.youtube.com/embed/-ROsbNgfwuQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+
+
+    <!-- Frase romántica y navideña después del video -->
+  <div id="mensajeRomantico" class="mensaje-romantico">
+    <p>
+      Mi amor, cada segundo a tu lado es como un regalo que la vida me dio. Esta Navidad, solo quiero agradecerte por ser mi razón de ser, por iluminar mi vida con tu sonrisa y por hacerme sentir el amor más hermoso del mundo. 🌟💖
+      <br><br>
+      Te prometo que siempre estaré a tu lado, y que cada Navidad, cada momento, cada día, será especial porque estarás conmigo. ¡Te amo más de lo que las palabras pueden expresar! Feliz Navidad, mi princesa. 🎄✨
+    </p>
+  </div>
+  </div>
+  <!-- Botón para regresar al inicio -->
+<div class="boton-regresar-container">
+    <a href="home.html" class="boton-regresar">⬅️ Regresar al inicio</a>
+  </div>
+
+  <script src="js/video.js"></script>
+</body>
+</html>

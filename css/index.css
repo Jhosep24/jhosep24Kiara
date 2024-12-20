@@ -1,0 +1,462 @@
+/* Ajustes globales */
+
+html, body {
+    background: #050A30;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+ 
+    justify-content: center;
+    text-align: center;
+    background-image: url(../img/fondo5.jpg);
+    background-size: cover;
+
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la pantalla */
+}
+
+
+
+/* Solución específica para el problema */
+body {
+    overflow-x: hidden; /* Fuerza a que no haya desbordes horizontales */
+    position: relative; /* Asegura que los elementos se posicionen dentro del viewport */
+}
+.header {
+    margin-top: 30px;
+}
+
+.title {
+    font-size: 3rem; /* Tamaño de la fuente */
+    animation: latir 1.5s ease-in-out infinite, cambioColor 3s ease-in-out infinite; /* Animaciones de latido y cambio de color */
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.7); /* Brillo alrededor del texto */
+    margin: 25px 0; /* Espaciado alrededor */
+    padding: 10px 20px; /* Espaciado interno para que no toque los bordes del título */ 
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Asegura que el borde se ajuste al texto */
+}
+@keyframes latir {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta el tamaño */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño normal */
+    }
+}
+
+/* Animación de cambio de color */
+@keyframes cambioColor {
+    0% {
+        color: #ff0000; /* Rojo */
+    }
+    33% {
+        color: #00FF00; /* Verde */
+    }
+    66% {
+        color: #FFD700; /* Dorado */
+    }
+    100% {
+        color: #ff0000; /* Rojo */
+    }
+}
+
+.subtitle {
+    font-size: 2rem;
+    animation: cambioColorSubtitle 15s ease-in-out infinite; /* Cambio de colores con 9s de duración */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Brillo suave */
+    padding: 10px 20px;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+@keyframes cambioColorSubtitle {
+    0% {
+        color: #ff0000; /* Rojo */
+    }
+    33% {
+        color: #00e600; /* Verde */
+    }
+    66% {
+        color: #003af7; /* Dorado */
+    }
+    100% {
+        color: #e20000; /* Rojo */
+    }
+}
+/* nuevo */
+
+.mensaje-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro pero transparente */
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6); /* Sombra suave */
+    display: inline-block;
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    margin-bottom: 40px;
+}
+
+.mensaje {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    animation: latir 1s infinite alternate, cambiarColor 5s infinite;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+    margin: 0;
+    text-align: center;
+}
+/* Animación para el cambio de color del texto cada 5 segundos */
+@keyframes cambiarColor {
+    0%, 100% {
+        color: #FF6347; /* Tomate */
+    }
+    33% {
+        color: #32CD32; /* Verde */
+    }
+    66% {
+        color: #1E90FF; /* Azul */
+    }
+}
+@keyframes parpadeoLuz {
+    0% {
+        color: #ff0000; /* Rojo */
+    }
+    20% {
+        color: #ffcc00; /* Amarillo */
+    }
+    40% {
+        color: #00ff00; /* Verde */
+    }
+    60% {
+        color: #00ccff; /* Azul */
+    }
+    80% {
+        color: #ff00ff; /* Rosa */
+    }
+    100% {
+        color: #ff0000; /* Rojo */
+    }
+}
+
+.text {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: parpadeoLuz 1.5s infinite; /* Animación de luces intermitentes */
+    letter-spacing: 3px;
+    
+}
+.estrella {
+    font-size: 100px;
+    animation: colores 1s infinite;
+    max-width: 100%; /* Evita que desborde en pantallas pequeñas */
+    text-align: center;
+}
+#arbol{
+   
+
+}
+.rojo{
+    color: red;
+    transition: all 1.5s;
+    font-size: 2.2em; /* Ajusta el tamaño según tu preferencia */
+
+}
+.contenedor_arbol {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad para que se vea el árbol */
+    padding: 20px; /* Espacio alrededor del árbol */
+    border-radius: 20px; /* Bordes redondeados para un toque más suave */
+    margin-top: 50px; /* Espacio superior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombra suave para dar profundidad */
+    width: 85%; /* Ajusta el tamaño del contenedor */
+    max-width: 600px; /* Limita el tamaño máximo */
+    margin-left: auto; /* Centrado automático */
+    margin-right: auto; /* Centrado automático */
+}
+.Color_texto {
+    font-size: 36px;
+    animation: changeColor 4s infinite;
+    max-width: 100%; /* Evita desbordes */
+}
+
+
+@keyframes changeColor {
+    0% {
+        color: #FF0000; /* Rojo */
+    }
+    25% {
+        color: #00FF00; /* Verde */
+    }
+    50% {
+        color: #0000FF; /* Azul */
+    }
+    75% {
+        color: #FFFF00; /* Amarillo */
+    }
+    100% {
+        color: #FF00FF; /* Magenta */
+    }
+}
+
+@keyframes colores {
+    0% {
+        color: red;
+
+    }
+    33% {
+        color: greenyellow;
+        
+    }
+    66% {
+        color: goldenrod;
+        
+    }
+    100% {
+        color: yellow;
+        
+    }
+
+}
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden; /* Evita que los copos desborden */
+}
+
+.snowflake {
+    position: absolute;
+    color: #fff; /* Color del copo de nieve */
+    font-size: 2em; /* Tamaño del copo de nieve */
+    animation: snowfall linear infinite; /* Animación de la nieve */
+}
+
+/* Definición de la animación */
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100vh); /* Empieza fuera de la pantalla */
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* Termina fuera de la pantalla después de una rotación completa */
+    }
+}
+
+/* Distribución aleatoria de los copos de nieve */
+.snowflake:nth-child(1) {
+    left: 5%; /* Puedes cambiar la posición izquierda */
+    animation-duration: 10s; /* Puedes ajustar la velocidad */
+}
+
+.snowflake:nth-child(2) {
+    left: 10%;
+    animation-duration: 15s;
+}
+
+.snowflake:nth-child(3) {
+    left: 15%;
+    animation-duration: 16s;
+}
+
+.snowflake:nth-child(4) {
+    left: 20%;
+    animation-duration: 18s;
+}
+.snowflake:nth-child(5) {
+    left: 25%;
+    animation-duration: 8s;
+}
+.snowflake:nth-child(6) {
+    left: 30%;
+    animation-duration: 9s;
+}
+.snowflake:nth-child(7) {
+    left: 35%;
+    animation-duration: 13s;
+}
+.snowflake:nth-child(8) {
+    left: 40%;
+    animation-duration: 17s;
+}
+.snowflake:nth-child(9) {
+    left: 45%;
+    animation-duration: 22s;
+}
+.snowflake:nth-child(10) {
+    left: 50%;
+    animation-duration: 21s;
+}
+.snowflake:nth-child(11) {
+    left: 55%;
+    animation-duration: 12s;
+}
+.snowflake:nth-child(12) {
+    left: 60%;
+    animation-duration: 8s;
+}
+.snowflake:nth-child(13) {
+    left: 65%;
+    animation-duration: 19s;
+}
+
+.snowflake:nth-child(14) {
+    left: 70%;
+    animation-duration: 13s;
+}
+
+.snowflake:nth-child(15) {
+    left: 75%;
+    animation-duration: 16s;
+}
+
+.snowflake:nth-child(16) {
+    left: 80%;
+    animation-duration: 15s;
+}
+
+.snowflake:nth-child(17) {
+    left: 85%;
+    animation-duration: 10s;
+}
+.snowflake:nth-child(18) {
+    left: 90%;
+    animation-duration: 12s;
+}
+.snowflake:nth-child(19) {
+    left: 95%;
+    animation-duration: 8s;
+}
+.snowflake:nth-child(20) {
+    left: 100%;
+    animation-duration: 10s;
+}
+
+/* nuevo */
+.musica-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#musica-btn {
+    background: linear-gradient(45deg, #ff0000, #00ff00);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#musica-btn:hover {
+    background: linear-gradient(45deg, #ff4d4d, #33cc33);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+#musica-btn::before, #musica-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease;
+}
+
+#musica-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+#musica-btn:hover::after {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+}
+
+.navegacion-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-home {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(to right, #FF4500, #FF6347);
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 24px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-home:hover {
+    background: linear-gradient(to right, #FF6347, #FF4500);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+.btn-home:active {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+
+
+/* Media Query para dispositivos con ancho máximo de 760px */
+/* Media Queries */
+@media (max-width: 760px) {
+    .title {
+        font-size: 2.8em;
+    }
+    .subtitle {
+        font-size: 1.3em;
+    }
+    #arbol {
+        font-size: 1.2em;
+    }
+    .Color_texto {
+        font-size: 1.5em;
+    }
+    .contenedor_arbol {
+        padding: 0 10px; /* Ajusta el contenido en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2em;
+    }
+    .subtitle {
+        font-size: 1.5em;
+    }
+    #arbol {
+        font-size: 1em;
+    }
+    .Color_texto {
+        font-size: 1.8em;
+    }
+    .contenedor_arbol {
+        padding: 0 5px;
+    }
+}
