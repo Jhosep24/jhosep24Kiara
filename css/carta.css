@@ -1,0 +1,239 @@
+/* Título con luces */
+/* Título con efectos de colores LED */
+.titulo-luces {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px; /* Espaciado superior */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    animation: coloresLED 1.5s infinite alternate;
+  }
+  
+  /* Definir la animación para los colores LED */
+  @keyframes coloresLED {
+    0% {
+      color: #ffffff; /* Rojo */
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    }
+    20% {
+      color: #ff4500; /* Naranja */
+      text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff4500;
+    }
+    40% {
+      color: #32cd32; /* Verde */
+      text-shadow: 0 0 10px #32cd32, 0 0 20px #32cd32, 0 0 30px #32cd32;
+    }
+    60% {
+      color: #1e90ff; /* Azul */
+      text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff, 0 0 30px #1e90ff;
+    }
+    80% {
+      color: #ffff00; /* Amarillo */
+      text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00;
+    }
+    100% {
+      color: #c300ff; /* Rosa */
+      text-shadow: 0 0 10px #cc00ff, 0 0 20px #cc00ff, 0 0 30px #d400ff;
+    }
+  }
+  
+  /* Resto del estilo que ya tenías para la carta */
+  body {
+    font-family: 'Sacramento', cursive;
+    background: linear-gradient(135deg, #db29ff, #ff3c00, #c155ff);
+/* Gradiente con rosa vibrante, rojo, dorado y verde */
+
+
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Para colocar los elementos de arriba hacia abajo */
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .carta-container {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 50px; /* Añadimos espacio desde el título */
+    background: #c3d1ff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   
+  }
+  
+  .mensaje-previo {
+    margin-bottom: 20px;
+  }
+  
+  .titulo-principal {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: #ff6347;
+    margin-bottom: 10px;
+  }
+  
+  .mensaje-previo-texto {
+    font-size: 22px;
+    color: #555;
+    font-family: 'Alex Brush', cursive;
+
+
+  }
+  
+  .ver-carta-btn,
+  .ocultar-carta-btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 18px;
+    font-family: 'Alex Brush', cursive;
+
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .ver-carta-btn:hover,
+  .ocultar-carta-btn:hover {
+    background-color: #ff4500;
+  }
+  
+  .carta {
+    display: none;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .titulo-carta {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #ff6347;
+    margin-bottom: 20px;
+  }
+
+  .contenido-carta {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    
+  }
+  
+  .regresar-btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    background-color: #20b2aa;
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+  }
+  
+  .regresar-btn:hover {
+    background-color: #3cb371;
+  }
+  
+  .ocultar-carta-btn {
+    display: none;
+  }
+
+
+  .mensaje-deseo {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .frase-deseo {
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro para resaltar la frase */
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 80%;
+    animation: aparecer 3s ease-in-out;
+  }
+  
+  @keyframes aparecer {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles for mobile devices (width <= 480px) */
+@media only screen and (max-width: 480px) {
+    /* Título principal ajustado para dispositivos móviles */
+    .titulo-luces {
+      font-size: 35px; /* Ajuste de tamaño */
+      letter-spacing: 3px; /* Reducir el espaciado */
+      margin-top: 30px; /* Menos margen superior */
+    }
+  
+    .titulo-principal {
+      font-size: 28px;
+    }
+  
+   
+  
+    /* Ajuste para el botón de regresar */
+    .regresar-btn {
+      margin-top: 20px;
+    }
+  }
+
+
+  .reproductor-musica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .boton-musica {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #ff7eb9;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-family: 'Alex Brush', cursive;
+
+  }
+  
+  .boton-musica:hover {
+    background-color: #ff65a3;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .boton-musica:active {
+    transform: scale(0.95);
+  }
+  

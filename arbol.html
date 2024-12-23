@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Navidad 2024</title>
+  <link rel="stylesheet" href="css/arbol.css">
+</head>
+<header>
+  <h1 class="titulo-arbol">✨ Deseos de Amor para Nuestro Futuro Juntos 💖</h1>
+  <audio id="musica" src="music/feliz navidad a todos.mp3" autoplay muted loop></audio>
+</header>
+
+<a href="home.html" class="btn-regresar">✨ Regresar  ✨</a>
+
+<body>
+  <audio id="musica" autoplay loop>
+    <source src="music/Tu Amor para Navidad.mp3" type="audio/mp3">
+    Tu navegador no soporta la etiqueta de audio.
+  </audio>
+
+<script>
+  window.onload = function() {
+  var musica = document.getElementById('musica');
+  musica.currentTime = 8; // Configurar el tiempo de inicio a 8 segundos
+  musica.play(); // Comenzar la reproducción después de recortar los primeros 8 segundos
+};
+
+</script>
+  <div class="container">
+    <h2 class="mensage">¡Feliz Navidad, mi amor! 🎄 Que esta Navidad esté llena de magia y amor junto a ti. Te amo más de lo que imaginas, mi princesa. ❤️🎁</h2>
+  </div>
+
+
+  <div class="frase-romantica">
+    <p>Mi amor, cada uno de estos deseos es un reflejo de lo mucho que te amo. ❤️ Son pequeños destellos de lo que sueño para nosotros, porque estar contigo es el mejor regalo que la vida me ha dado. 🎄✨</p>
+    <p class="sub-frase">Haz clic en cada uno de los círculos abajo para descubrir los deseos que tengo para ti. 💖</p>
+
+  </div>
+
+
+ <!-- Contenedor de deseos -->
+ <div class="deseos-container">
+  <div class="deseo" onclick="mostrarDeseo(1)">
+    ❤️🎄
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(2)">
+    ✨🌟
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(3)">
+    💖🎁
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(4)">
+    🌙💫
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(5)">
+    🎉💝
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(6)">
+    🌹💌
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(7)">
+    💑💫
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(8)">
+    🌸💕
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(9)">
+    🏞️💖
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(10)">
+    💓🎶
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(11)">
+    🌙✨
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(12)">
+    🌹💍
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(13)">
+    🕊️💑
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(14)">
+    🌟💏
+  </div>
+  <div class="deseo" onclick="mostrarDeseo(15)">
+    🎄💝
+  </div>
+</div>
+
+
+
+  <!-- Modales -->
+<!-- Modal -->
+<!-- Fondo superpuesto (overlay) -->
+<div id="modal-overlay" class="modal-overlay"></div>
+
+<!-- Modal -->
+<div id="modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">¡Mi Deseo para Ti!</h5>
+    </div>
+    <div class="modal-body">
+      <p id="deseo-texto"></p>
+      <button type="button" class="btn-close" onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="js/arbol.js"></script>
+
+</body>
+
+</html>
