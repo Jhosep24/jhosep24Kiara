@@ -122,7 +122,10 @@
     color: #ff6347;
     margin-bottom: 20px;
   }
-
+  .mensaje-carta{
+    font-size: 22px;
+    font-family: 'Alex Brush', cursive;
+  }
   .contenido-carta {
     font-size: 17px;
     color: #333;
